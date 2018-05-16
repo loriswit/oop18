@@ -23,7 +23,7 @@ public class Polygon extends Shape
     
     private static Point[] asVertices(Vector[] vectors)
     {
-        var res = new Point[vectors.length + 1];
+        Point[] res = new Point[vectors.length + 1];
         double x = 0;
         double y = 0;
         res[0] = new Point(x, y);
@@ -51,7 +51,7 @@ public class Polygon extends Shape
     
     private static Point[] copy(Point[] points)
     {
-        var res = new Point[points.length];
+        Point[] res = new Point[points.length];
         for(int i = 0; i < points.length; i++)
         {
             res[i] = points[i].duplicate();
@@ -61,8 +61,8 @@ public class Polygon extends Shape
     
     private void locateAtOrigin()
     {
-        var reference = centroid();
-        for(var vertex : vertices)
+        Point reference = centroid();
+        for(Point vertex : vertices)
             vertex.translate(-reference.x(), -reference.y());
     }
     
@@ -111,21 +111,21 @@ public class Polygon extends Shape
     @Override
     public void translate(double deltaX, double deltaY)
     {
-        for(var vertex : vertices)
+        for(Point vertex : vertices)
             vertex.translate(deltaX, deltaY);
     }
     
     @Override
     public void rotate(double angle, Point anchor)
     {
-        for(var vertex : vertices)
+        for(Point vertex : vertices)
             vertex.rotate(angle, anchor);
     }
     
     @Override
     public void scale(double factor, Point anchor)
     {
-        for(var vertex : vertices)
+        for(Point vertex : vertices)
             vertex.scale(factor, anchor);
     }
     
@@ -138,7 +138,7 @@ public class Polygon extends Shape
     
     private double[][] verticesAsArrays()
     {
-        var array = new double[vertices.length][];
+        double[][] array = new double[vertices.length][];
         for(int i = 0; i < vertices.length; i++)
         {
             array[i] = vertices[i].asArray();

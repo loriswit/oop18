@@ -59,7 +59,7 @@ public class View extends Display
     @Override
     public void paint(Display display)
     {
-        for(var shape : shapes)
+        for(Shape shape : shapes)
             shape.paint(display);
     }
 }

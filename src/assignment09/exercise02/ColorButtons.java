@@ -16,7 +16,7 @@ public class ColorButtons implements Runnable
     
     private void addButton(String name, Color color)
     {
-        var button = new JButton(name);
+        JButton button = new JButton(name);
         button.setPreferredSize(new Dimension(120, 30));
         button.addActionListener(e -> panel.setBackground(color));
         panel.add(button);
@@ -33,12 +33,12 @@ public class ColorButtons implements Runnable
         addButton("Green", Color.GREEN);
         addButton("Blue", Color.BLUE);
         
-        var window = new JFrame("Select color");
+        JFrame window = new JFrame("Select color");
         window.setContentPane(panel);
         
         window.pack();
         window.setLocationRelativeTo(null);
         window.setVisible(true);
-        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 }

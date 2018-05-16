@@ -18,11 +18,11 @@ public class MouseEventDemo extends JPanel implements Runnable
     
     public void addBlankArea(Color color)
     {
-        var label = new JLabel();
+        JLabel label = new JLabel();
         label.setPreferredSize(new Dimension(400, 200));
         label.addMouseListener(new CustomListener("blank area", textArea));
         
-        var blankPanel = new JPanel();
+        JPanel blankPanel = new JPanel();
         blankPanel.setBackground(color);
         blankPanel.add(label);
         
@@ -46,11 +46,11 @@ public class MouseEventDemo extends JPanel implements Runnable
         addBlankArea(Color.GREEN);
         addTextArea();
         
-        var window = new JFrame("Mouse Event Demo");
+        JFrame window = new JFrame("Mouse Event Demo");
         window.setContentPane(panel);
         window.pack();
         window.setLocationRelativeTo(null);
-        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         window.setVisible(true);
     }
     

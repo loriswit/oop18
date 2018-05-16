@@ -14,10 +14,10 @@ public class Segment
     
     public boolean intersects(Segment other)
     {
-        var sgt1rot1 = ccw(other.pt1);
-        var sgt1rot2 = ccw(other.pt2);
-        var sgt2rot1 = other.ccw(pt1);
-        var sgt2rot2 = other.ccw(pt2);
+        double sgt1rot1 = ccw(other.pt1);
+        double sgt1rot2 = ccw(other.pt2);
+        double sgt2rot1 = other.ccw(pt1);
+        double sgt2rot2 = other.ccw(pt2);
         
         return sgt2rot1 * sgt2rot2 < 0 && sgt1rot1 * sgt1rot2 < 0;
     }

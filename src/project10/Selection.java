@@ -10,7 +10,7 @@ public class Selection
     
     public Selection(View view, Point point)
     {
-        for(var shape : view.shapes())
+        for(Shape shape : view.shapes())
             if(shape.contains(point))
                 selectedShape = shape;
         

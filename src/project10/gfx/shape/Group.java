@@ -26,21 +26,21 @@ public class Group extends Shape
     @Override
     public void rotate(double angle, Point anchor)
     {
-        for(var elem : shapes)
+        for(Shape elem : shapes)
             elem.rotate(angle, anchor);
     }
     
     @Override
     public void translate(double deltaX, double deltaY)
     {
-        for(var shape : shapes)
+        for(Shape shape : shapes)
             shape.translate(deltaX, deltaY);
     }
     
     @Override
     public void scale(double factor, Point anchor)
     {
-        for(var shape : shapes)
+        for(Shape shape : shapes)
             shape.scale(factor, anchor);
     }
     
@@ -48,7 +48,7 @@ public class Group extends Shape
     public double area()
     {
         double area = 0;
-        for(var shape : shapes)
+        for(Shape shape : shapes)
             area += shape.area();
         
         return area;
@@ -61,7 +61,7 @@ public class Group extends Shape
         double y = 0;
         double area = 0;
         
-        for(var shape : shapes)
+        for(Shape shape : shapes)
         {
             x += shape.centroid().x() * shape.area();
             y += shape.centroid().y() * shape.area();
@@ -74,7 +74,7 @@ public class Group extends Shape
     @Override
     public boolean contains(Point point)
     {
-        for(var shape : shapes)
+        for(Shape shape : shapes)
             if(shape.contains(point))
                 return true;
         
@@ -84,7 +84,7 @@ public class Group extends Shape
     @Override
     public void paint(Painting painting)
     {
-        for(var shape : shapes)
+        for(Shape shape : shapes)
             shape.paint(painting);
     }
     
@@ -94,7 +94,7 @@ public class Group extends Shape
         int g = 0;
         int b = 0;
         
-        for(var shape : shapes)
+        for(Shape shape : shapes)
         {
             r += shape.getColor().getRed();
             g += shape.getColor().getGreen();

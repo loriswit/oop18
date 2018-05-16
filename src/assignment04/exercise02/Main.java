@@ -12,7 +12,7 @@ public class Main
         Manager patrick = new Manager("Patrick", 8000, 5);
         Manager jean = new Manager("Jean", 10000, 12);
         
-        List<Employee> employees = new ArrayList<>()
+        List<Employee> employees = new ArrayList<Employee>()
         {{
             add(john);
             add(bob);

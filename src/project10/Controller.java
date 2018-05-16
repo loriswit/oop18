@@ -21,8 +21,8 @@ public class Controller extends MouseAdapter implements KeyListener
     @Override
     public void mousePressed(MouseEvent e)
     {
-        var x = (e.getX() - view.getXOrigin()) / view.getXScale();
-        var y = (e.getY() - view.getYOrigin()) / view.getYScale();
+        double x = (e.getX() - view.getXOrigin()) / view.getXScale();
+        double y = (e.getY() - view.getYOrigin()) / view.getYScale();
         
         selection = new Selection(view, new Point(x, y));
         view.repaint();

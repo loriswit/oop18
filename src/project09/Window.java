@@ -14,10 +14,10 @@ public class Window extends JFrame
     public Window()
     {
         setTitle("Tangram");
-        
-        var menuBar = new JMenuBar();
-        var gameMenu = new JMenu("Game");
-        var exitItem = new JMenuItem("Exit");
+    
+        JMenuBar menuBar = new JMenuBar();
+        JMenu gameMenu = new JMenu("Game");
+        JMenuItem exitItem = new JMenuItem("Exit");
         
         exitItem.addActionListener(e -> System.exit(0));
         gameMenu.add(exitItem);

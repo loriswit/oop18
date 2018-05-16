@@ -69,7 +69,7 @@ public class Test implements Runnable
             shapes[i].rotate(angles[i]);
         }
         
-        var window = new Window();
+        Window window = new Window();
         window.getView().add(shapes);
     }
 }
